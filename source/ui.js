@@ -9,7 +9,7 @@ const open = url => opn(url, {wait: false});
 
 const handleSelect = item => {
 	if (item.url) {
-		open('https://sindresorhus.com');
+		open(item.url);
 	}
 
 	if (item.action) {
