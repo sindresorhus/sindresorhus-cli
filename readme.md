@@ -1,6 +1,6 @@
-# sindresorhus [![Build Status](https://travis-ci.org/sindresorhus/sindresorhus.svg?branch=master)](https://travis-ci.org/sindresorhus/sindresorhus)
+# kmdkuk [![Build Status](https://travis-ci.org/kmdkuk/kmdkuk.svg?branch=master)](https://travis-ci.org/kmdkuk/kmdkuk)
 
-> The [Sindre Sorhus](https://sindresorhus.com) CLI
+> The kmdkuk CLI
 
 <img src="screenshot.png" width="752">
 
@@ -10,7 +10,7 @@
 Install Node.js, then:
 
 ```
-$ npx sindresorhus
+$ npx kmdkuk
 ```
 
 
