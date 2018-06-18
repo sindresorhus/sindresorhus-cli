@@ -1,2 +1,4 @@
 node_modules
 yarn.lock
+/source/.DS_Store
+/.DS_Store
