@@ -3,11 +3,11 @@
 	"version": "2.1.0",
 	"description": "The Sindre Sorhus CLI",
 	"license": "MIT",
-	"repository": "sindresorhus/sindresorhus",
+	"repository": "sindresorhus/sindresorhus-cli",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"bin": {
 		"sindresorhus": "source/cli.js"
