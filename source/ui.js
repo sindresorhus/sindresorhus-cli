@@ -39,7 +39,7 @@ const items = createItems([
 	},
 	{
 		label: 'Blog',
-		url: 'https://blog.sindresorhus.com'
+		url: 'https://medium.com/sindre-sorhus'
 	},
 	{
 		label: 'Ask Me Anything',
