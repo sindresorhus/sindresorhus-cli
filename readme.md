@@ -6,10 +6,10 @@
 
 ## Usage
 
-Install Node.js, then:
+Install Node.js and then run:
 
-```
-$ npx sindresorhus
+```sh
+npx sindresorhus
 ```
 
 ## Built with

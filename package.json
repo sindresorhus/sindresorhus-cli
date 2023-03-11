@@ -9,11 +9,10 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
-	"bin": {
-		"sindresorhus": "source/cli.js"
-	},
+	"type": "module",
+	"bin": "./source/cli.js",
 	"engines": {
-		"node": ">=8"
+		"node": ">=16"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -28,22 +27,22 @@
 		"unicorns"
 	],
 	"dependencies": {
-		"import-jsx": "^2.0.0",
-		"ink": "^2.1.1",
-		"ink-select-input": "^3.1.1",
-		"meow": "^5.0.0",
-		"open": "^6.3.0",
-		"react": "^16.8.6",
-		"term-img": "^4.1.0",
-		"terminal-image": "^0.2.0"
+		"import-jsx": "^5.0.0",
+		"ink": "^4.2.0",
+		"ink-select-input": "^5.0.0",
+		"meow": "^12.0.1",
+		"open": "^9.1.0",
+		"react": "^18.2.0",
+		"term-img": "^6.0.0",
+		"terminal-image": "^2.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"eslint-config-xo-react": "^0.19.0",
-		"eslint-plugin-react": "^7.7.0",
-		"eslint-plugin-react-hooks": "^1.6.0",
-		"execa": "^1.0.0",
-		"xo": "^0.24.0"
+		"ava": "^5.3.0",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"execa": "^7.1.1",
+		"xo": "^0.54.2"
 	},
 	"xo": {
 		"extends": [

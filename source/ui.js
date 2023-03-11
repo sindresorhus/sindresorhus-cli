@@ -1,10 +1,13 @@
-'use strict';
-const path = require('path');
-const React = require('react');
-const {Box, Text} = require('ink');
-const SelectInput = require('ink-select-input').default;
-const open = require('open');
-const terminalImage = require('terminal-image');
+import process from 'node:process';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import React from 'react';
+import {Box, Text} from 'ink';
+import SelectInput from 'ink-select-input';
+import open from 'open';
+import terminalImage from 'terminal-image';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const handleSelect = item => {
 	if (item.url) {
@@ -27,31 +30,23 @@ const createItems = items => {
 const items = createItems([
 	{
 		label: 'Website',
-		url: 'https://sindresorhus.com'
+		url: 'https://sindresorhus.com',
 	},
 	{
 		label: 'Twitter',
-		url: 'https://twitter.com/sindresorhus'
+		url: 'https://twitter.com/sindresorhus',
+	},
+	{
+		label: 'Mastodon',
+		url: 'https://mastodon.social/@sindresorhus',
 	},
 	{
 		label: 'GitHub',
-		url: 'https://github.com/sindresorhus'
-	},
-	{
-		label: 'Blog',
-		url: 'https://medium.com/sindre-sorhus'
-	},
-	{
-		label: 'Ask Me Anything',
-		url: 'https://github.com/sindresorhus/ama'
+		url: 'https://github.com/sindresorhus',
 	},
 	{
 		label: 'Contact',
-		url: 'https://sindresorhus.com/contact'
-	},
-	{
-		label: 'Support my open source work',
-		url: 'https://www.patreon.com/sindresorhus'
+		url: 'https://sindresorhus.com/contact',
 	},
 	{
 		label: 'Unicorns!',
@@ -59,25 +54,27 @@ const items = createItems([
 			console.log(await terminalImage.file(path.join(__dirname, 'unicorn1.gif')));
 			console.log(await terminalImage.file(path.join(__dirname, 'unicorn2.gif')));
 			console.log(await terminalImage.file(path.join(__dirname, 'unicorn3.gif')));
-		}
+		},
 	},
 	// TODO: Add separator item here when https://github.com/vadimdemedes/ink-select-input/issues/4 is done
 	{
-		label: '---------'
+		label: '---------',
 	},
 	{
 		label: 'Quit',
 		action() {
 			process.exit(); // eslint-disable-line unicorn/no-process-exit
-		}
-	}
+		},
+	},
 ]);
 
-module.exports = () => (
-	<Box flexDirection="column">
+const ui = () => (
+	<Box flexDirection='column'>
 		<Box marginBottom={1}>
 			<Text>I’m a full-time open-sourcerer making things like macOS apps, CLI tools, and modules.</Text>
 		</Box>
 		<SelectInput items={items} onSelect={handleSelect}/>
 	</Box>
 );
+
+export default ui;

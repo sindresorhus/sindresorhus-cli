@@ -1,19 +1,21 @@
-#!/usr/bin/env node
-'use strict';
-const path = require('path');
-const meow = require('meow');
-const termImg = require('term-img');
-const terminalImage = require('terminal-image');
-const importJsx = require('import-jsx');
-const React = require('react');
-const {render} = require('ink');
+#!/usr/bin/env NODE_NO_WARNINGS=1 node --loader=import-jsx
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import meow from 'meow';
+import termImg from 'term-img';
+import terminalImage from 'terminal-image';
+import React from 'react';
+import {render} from 'ink';
+import ui from './ui.js';
 
-const ui = importJsx('./ui');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 meow(`
 	Usage
 	  $ sindresorhus
-`);
+`, {
+	importMeta: import.meta,
+});
 
 const fallback = async () => {
 	const image = await terminalImage.file(path.join(__dirname, 'avatar-fallback.png'));
