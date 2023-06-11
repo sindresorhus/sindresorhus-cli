@@ -10,15 +10,18 @@
 		"url": "https://sindresorhus.com"
 	},
 	"type": "module",
-	"bin": "./source/cli.js",
+	"bin": "./dist/cli.js",
 	"engines": {
 		"node": ">=16"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"pretest": "npm run build",
+		"prepublish": "npm run build",
+		"test": "xo && ava",
+		"build": "tsc"
 	},
 	"files": [
-		"source"
+		"dist"
 	],
 	"keywords": [
 		"cli-app",
@@ -37,16 +40,25 @@
 		"terminal-image": "^2.0.0"
 	},
 	"devDependencies": {
+		"@sindresorhus/tsconfig": "^3.0.1",
+		"@types/react": "^18.2.11",
 		"ava": "^5.3.0",
 		"eslint-config-xo-react": "^0.27.0",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"execa": "^7.1.1",
+		"typescript": "^5.1.3",
 		"xo": "^0.54.2"
 	},
 	"xo": {
 		"extends": [
 			"xo-react"
-		]
+		],
+		"rules": {
+			"@typescript-eslint/no-unsafe-assignment": "off",
+			"@typescript-eslint/no-unsafe-return": "off",
+			"@typescript-eslint/no-unsafe-call": "off",
+			"@typescript-eslint/no-unsafe-argument": "off"
+		}
 	}
 }

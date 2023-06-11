@@ -1,4 +1,4 @@
-#!/usr/bin/env NODE_NO_WARNINGS=1 node --loader=import-jsx
+#!/usr/bin/env node
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import meow from 'meow';
@@ -22,6 +22,7 @@ const fallback = async () => {
 	console.log(image);
 };
 
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
 termImg(path.join(__dirname, 'avatar.png'), {fallback});
 
 render(React.createElement(ui));

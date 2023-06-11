@@ -9,9 +9,10 @@ import terminalImage from 'terminal-image';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const handleSelect = item => {
+const handleSelect = (item: any) => {
 	if (item.url) {
-		open(item.url);
+		open(item.url); // eslint-disable-line @typescript-eslint/no-floating-promises
+		return;
 	}
 
 	if (item.action) {
@@ -19,7 +20,7 @@ const handleSelect = item => {
 	}
 };
 
-const createItems = items => {
+const createItems = (items: any) => {
 	for (const item of items) {
 		item.key = item.url || item.label;
 	}
