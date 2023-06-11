@@ -21,7 +21,8 @@
 		"build": "tsc"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"assets"
 	],
 	"keywords": [
 		"cli-app",
